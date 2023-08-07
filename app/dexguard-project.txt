@@ -1,0 +1,11 @@
+-verbose
+
+#-addconfigurationdebugging
+-raspchecks *
+-raspcontinueon none
+
+
+
+-raspcallback emulator class com.sourcey.materiallogindemo.MainActivity {
+    public static void myEmulatorCallback(long);
+}
