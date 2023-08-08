@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.scope.ProjectInfo.Companion.getBaseName
-
 plugins {
     id("com.android.application")
     id("dexguard")
@@ -10,7 +8,7 @@ android {
     compileSdk = 33
 
     signingConfigs {
-        getByName("debug"){
+        create("release"){
             storeFile = file("/Users/rmltech/Documents/keystore/project-java-sample")
             storePassword = "123456"
             keyAlias = "project-java-sample"
@@ -33,19 +31,15 @@ android {
 
     buildTypes {
 
-//        release {
-//            isMinifyEnabled = false
-//            proguardFiles(
-//                getDefaultProguardFile("proguard-android-optimize.txt"),
-//                "proguard-rules.pro"
-//            )
-//        }
-
-        getByName("release"){
+        release {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
-            isDebuggable = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            signingConfig = signingConfigs.getByName("release")
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -75,6 +69,9 @@ dexguard {
         register("debug") {
             defaultConfiguration("dexguard-debug.pro")
             configuration("dexguard-project.txt")
+            defaultConfiguration("dexguard-rasp.pro")
         }
     }
+
+
 }

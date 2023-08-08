@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public static void myEmulatorCallback(long debugInfo)
+    public static void debugCallback(long debugInfo)
     {
         // This method will be called when an emulator is detected.
-        Log.i("HelloWorldActivity", "Emulator detected. DebugInfo : " + debugInfo);
+        Log.i("HelloWorldActivity", "debug detected. DebugInfo : " + debugInfo);
     }
 }

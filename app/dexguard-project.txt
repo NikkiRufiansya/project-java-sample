@@ -1,11 +1,11 @@
 -verbose
 
 #-addconfigurationdebugging
--raspchecks *
+-raspchecks emulator
 -raspcontinueon none
 
 
 
 -raspcallback emulator class com.sourcey.materiallogindemo.MainActivity {
-    public static void myEmulatorCallback(long);
+    public static void debugCallback(long);
 }
