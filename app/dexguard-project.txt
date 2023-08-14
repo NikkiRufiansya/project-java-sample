@@ -1,11 +1,25 @@
--verbose
-
+#FOR DEBUG
+#-verbose
 #-addconfigurationdebugging
+
+#RASP
 -raspchecks emulator
--raspcontinueon none
+-raspcontinueon emulator
 
-
-
+#RASP CALLBACK
 -raspcallback emulator class com.sourcey.materiallogindemo.MainActivity {
-    public static void debugCallback(long);
+    public static void emulatorCallback(long);
 }
+
+#EXCLUDE OBFUSCATION
+-keep class androidx.**{*;}
+-keep class android.**{*;}
+-keep class kotlinx.coroutines.**{*;}
+-keep class com.google.android.material.**{*;}
+-keep class kotlin.coroutines.** {*;}
+-keep class kotlin.jvm.**{*;}
+
+#OBFUSCATION DICTIONARY
+-obfuscationdictionary <alphabetic>
+
+-dontwarn
