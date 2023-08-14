@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public static void detectionReport(DetectionReport detectionReport) {
-        if (detectionReport.isRunningInEmulator()) {
-            Log.d("hello", "emulator detected");
-            emulatorDetected = true;
-        }
+    public static void detectionReport(long detectionReport) {
+        Log.d("hello", "emulator detected");
+        emulatorDetected = true;
     }
+
+
 
 }

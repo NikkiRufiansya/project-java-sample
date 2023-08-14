@@ -4,7 +4,7 @@ buildscript {
     val agp_version by extra("8.0.1")
     repositories {
         maven {
-            setUrl("/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.14/lib")
+            setUrl("/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.15/lib")
         }
         flatDir {
             dirs("libs")

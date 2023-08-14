@@ -2,12 +2,13 @@
 
 #-addconfigurationdebugging
 -raspchecks emulator
--raspcontinueon *
+-raspcontinueon emulator
 
-#-raspcallback emulator class com.sourcey.materiallogindemo.MainActivity {
-#    public static void emulatorCallback(long);
-#}
-
--raspcallback emulator class com.sourcey.materiallogindemo.MainActivity{
-    public static void detectionReport(com.guardsquare.dexguard.rasp.callback.DetectionReport);
+-raspcallback emulator class com.sourcey.materiallogindemo.MainActivity {
+    public static void detectionReport(long);
 }
+
+
+#-raspcallback emulator class com.sourcey.materiallogindemo.MainActivity{
+#    public static void detectionReport(com.guardsquare.dexguard.rasp.callback.DetectionReport);
+#}

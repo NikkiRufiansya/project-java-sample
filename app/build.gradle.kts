@@ -57,14 +57,14 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     compileOnly(
-        files("/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.14/lib/dexguard-rasp.jar")
+        files("/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.15/lib/dexguard-rasp.jar")
     )
 
 
 }
 
 dexguard {
-    path = "/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.14"
+    path = "/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.15"
     license = "/Users/rmltech/Documents/GuardSqurare/dexguard-license.txt"
     configurations {
         register("release") {
