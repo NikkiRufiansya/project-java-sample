@@ -9,7 +9,7 @@ android {
 
     signingConfigs {
         create("release"){
-            storeFile = file("/Users/rmltech/Documents/keystore/project-java-sample")
+            storeFile = file("/Users/rmltech/Documents/GuardSquare/testingapp")
             storePassword = "123456"
             keyAlias = "project-java-sample"
             keyPassword = "123456"
@@ -23,12 +23,14 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
 
 
     buildTypes {
+
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -37,8 +39,8 @@ android {
             )
             signingConfig = signingConfigs.getByName("release")
         }
-    }
 
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -55,20 +57,14 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    compileOnly(
-        files("/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.15/lib/dexguard-rasp.jar")
-    )
-
-
 }
 
 dexguard {
-    path = "/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.15"
-    license = "/Users/rmltech/Documents/GuardSqurare/dexguard-license.txt"
+    path = "/Users/rmltech/Documents/GuardSquare/DEXGUARD-VERSI/DexGuard-9.4.15"
+    license = "/Users/rmltech/Documents/GuardSquare/dexguard-license.txt"
     configurations {
         register("release") {
-            defaultConfiguration("dexguard-release.pro")
+            defaultConfiguration("dexguard-release-aggressive.pro")
             configuration("dexguard-project.txt")
             defaultConfiguration("dexguard-rasp.pro")
         }
