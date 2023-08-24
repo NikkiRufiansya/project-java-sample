@@ -4,12 +4,21 @@
 
 #RASP
 -raspchecks emulator
--raspcontinueon emulator
+-raspcontinueon *
 
 #RASP CALLBACK
 -raspcallback emulator class com.sourcey.materiallogindemo.MainActivity {
     public static void emulatorCallback(long);
 }
+
+
+#-raspcallback debug class com.sourcey.materiallogindemo.MainActivity{
+#    public static void debugCallback(long);
+#}
+
+#-raspcallback root class com.sourcey.materiallogindemo.MainActivity{
+#    public static void rootCallback(long);
+#}
 
 #EXCLUDE OBFUSCATION
 -keep class androidx.**{*;}
@@ -18,6 +27,9 @@
 -keep class com.google.android.material.**{*;}
 -keep class kotlin.coroutines.** {*;}
 -keep class kotlin.jvm.**{*;}
+
+
+
 
 #OBFUSCATION DICTIONARY
 -obfuscationdictionary <alphabetic>

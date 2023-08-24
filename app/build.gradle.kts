@@ -1,20 +1,20 @@
 plugins {
     id("com.android.application")
-    id("dexguard")
+    //id("dexguard")
 }
 
 android {
     namespace = "com.sourcey.materiallogindemo"
     compileSdk = 33
 
-    signingConfigs {
-        create("release"){
-            storeFile = file("/Users/rmltech/Documents/GuardSquare/testingapp")
-            storePassword = "123456"
-            keyAlias = "project-java-sample"
-            keyPassword = "123456"
-        }
-    }
+//    signingConfigs {
+//        create("release"){
+//            storeFile = file("/Users/rmltech/Documents/keystore/project-java-sample")
+//            storePassword = "123456"
+//            keyAlias = "project-java-sample"
+//            keyPassword = "123456"
+//        }
+//    }
 
 
     defaultConfig {
@@ -37,7 +37,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+
+            //signingConfig = signingConfigs.getByName("release")
+
         }
 
     }
@@ -59,21 +61,19 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-dexguard {
-    path = "/Users/rmltech/Documents/GuardSquare/DEXGUARD-VERSI/DexGuard-9.4.15"
-    license = "/Users/rmltech/Documents/GuardSquare/dexguard-license.txt"
-    configurations {
-        register("release") {
-            defaultConfiguration("dexguard-release-aggressive.pro")
-            configuration("dexguard-project.txt")
-            defaultConfiguration("dexguard-rasp.pro")
-        }
-        register("debug") {
-            defaultConfiguration("dexguard-debug.pro")
-            configuration("dexguard-project.txt")
-            defaultConfiguration("dexguard-rasp.pro")
-        }
-    }
-
-
-}
+//dexguard {
+//    path = "/Users/rmltech/Documents/GuardSqurare/DexGuard-9.4.16"
+//    license = "/Users/rmltech/Documents/GuardSqurare/dexguard-license.txt"
+//    configurations {
+//        register("release") {
+//            defaultConfiguration("dexguard-release-aggressive.pro")
+//            configuration("dexguard-project.txt")
+//        }
+//
+//
+//        register("debug") {
+//            defaultConfiguration("dexguard-debug.pro")
+//            configuration("dexguard-project.txt")
+//        }
+//    }
+//}
