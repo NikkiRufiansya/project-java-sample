@@ -11,7 +11,6 @@
     public static void emulatorCallback(long);
 }
 
-
 #-raspcallback debug class com.sourcey.materiallogindemo.MainActivity{
 #    public static void debugCallback(long);
 #}

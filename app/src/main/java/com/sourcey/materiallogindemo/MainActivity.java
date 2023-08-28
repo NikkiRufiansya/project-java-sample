@@ -7,8 +7,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
-
 import java.util.UUID;
+
 
 public class MainActivity extends AppCompatActivity {
     public static Boolean emulatorDetection = false;
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
         },600);
     }
+
     public void MyToast(){
         Toast.makeText(this, "Terjadi Kesalahan App Terinstall di perangkat berbahaya",Toast.LENGTH_SHORT).show();
         finishAffinity();
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("HelloWorldActivity", "Root Detected : " + debugInfo);
         rootDetection = true;
     }
+
 
 
 }

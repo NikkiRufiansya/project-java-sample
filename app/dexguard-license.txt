@@ -1,0 +1,12 @@
+# Guardsquare license file
+expiryDate            = 2024-01-22
+maintenanceExpiryDate = 2024-01-22
+product               = DexGuard
+version               = 7.*,8.*,9.*
+identifier            = com.sourcey.materiallogindemo
+licensee              = Raditya Mulia Lestari, PT. (RML)
+customerID            = AC00010174
+contact               = RML Technical
+contactEmail          = technical@rml.co.id
+licenseFileVersion    = 1
+licenseKey            = 2cefd50c399ec0cc862f84ffdce21afdd2f7602fe2b0d2f465b5b00cded628ce9506bbee77d62c97ebdca5de46ae55c72f84e99141d3fbc429175d0ee3857616
