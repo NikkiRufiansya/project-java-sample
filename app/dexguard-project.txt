@@ -19,6 +19,8 @@
 #    public static void rootCallback(long);
 #}
 
+
+
 #EXCLUDE OBFUSCATION
 -keep class androidx.**{*;}
 -keep class android.**{*;}
